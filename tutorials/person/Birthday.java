@@ -1,11 +1,11 @@
-package testPackage; 
+package person; 
 
 public class Birthday {
     private int day;
     private int month;
     private int year;
 
-    Birthday(int d, int m, int y) {
+    public Birthday(int d, int m, int y) {
         this.day = d;
         this.month = m;
         this.year = y;
