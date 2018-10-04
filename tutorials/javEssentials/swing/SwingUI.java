@@ -1,3 +1,5 @@
+// Simple swing Application
+
 import java.awt.Color;
 import java.awt.BorderLayout;
 import java.awt.event.*;
@@ -16,7 +18,7 @@ class SwingUI extends JFrame implements ActionListener {
 	SwingUI() {
 		// Begin Constructor
 		text = new JLabel("I'm a Simple program");
-		button = ne JButton("Click Me");
+		button = new JButton("Click Me");
 		button.addActionListener(this);
 		panel = new JPanel();
 		panel.setLayout(new BorderLayout());
@@ -49,6 +51,16 @@ class SwingUI extends JFrame implements ActionListener {
 	/* Main Method */
 	public static void main(String[] args) {
 
-		SwingUI
+		SwingUI frame = new SwingUI();
+		frame.setTitle("Example");
+		WindowListener l = new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				System.exit(0);
+			}
+		};
+
+		frame.addWindowListener(l);
+		frame.pack();
+		frame.setVisible(true);
 	}
 }
